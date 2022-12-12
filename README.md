@@ -1,24 +1,66 @@
-# README
+# Discogs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a musical recordings database where you can filtering, by artist, genre or year, sort, search and get images. 
 
-Things you may want to cover:
+Stay tuned!
 
-* Ruby version
+# Built With
+ - Ruby on Rails
+ - CSS
 
-* System dependencies
+# Live Demo
+(none at the moment)
 
-* Configuration
+# Additional Tools
+  1. Rubocop
+  2. Stylelint
+  3. Ruby Gems
 
-* Database creation
+# Getting Started
+To get local copy of the project and run
 
-* Database initialization
+1. ``git clone git@github.com:moise-mulungu/Discogs.git``
+2. ``cd Discogs``
+3. ``gem install bundler``
+4. ``bundle install``
+5. ``rails s``
 
-* How to run the test suite
+## Database Setup
+Setup db
 
-* Services (job queues, cache servers, search engines, etc.)
+1. ``su - postgres``
+2. ``psql``
+3. ``create role recipe with createdb login password 'recipe'``
+4. ``rails db:setup``
+5. ``rails db:create``
 
-* Deployment instructions
+# Tests
 
-* ...
+1. ``bundle exec rspec``
+2. ``rubocop``
+
+## Author
+
+👤 **Moise Mulungu**
+
+- GitHub: [@moise-mulungu](https://github.com/moise-mulungu)
+- Twitter: [@moise_mulungu](https://twitter.com/moise_mulungu)
+- LinkedIn: [Moïse (Musa) Mulungu](https://www.linkedin.com/in/moisemulungu/) 
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/moise-mulungu/Discogs/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse: [microverse community](https://github.com/microverseinc)
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
