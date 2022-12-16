@@ -1,2 +1,21 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+<h1>Artists</h1>
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <a href="<%= artists_path(artist) %>">
+      Name: <%=  artist.name %>
+      </a>
+    </li>
+    <li>
+    <a href="<%= artists_path(artist) %>">
+    Country: <%= artist.country %>
+    </a>
+  </li>
+  <li>
+  <a href="<%= artists_path(artist) %>">
+   Albums: <%=  artist.numbers_of_album %>
+  </a>
+</li>
+image : <%= artist.image %>
+<% end %>
+</ul>
