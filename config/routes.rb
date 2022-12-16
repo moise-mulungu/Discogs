@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'songs/index'
+  get 'songs/show'
+  get 'songs/new'
+  get 'songs/delete'
   resources :albums
   # get 'genres/index'
  
