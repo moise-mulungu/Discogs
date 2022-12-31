@@ -2,8 +2,8 @@
 
 <%= form_with model: @genre do |form| %>
   <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
     <% @genre.errors.full_messages_for(:name).each do |message| %>
         <div><%= message %></div>
       <% end %>
@@ -13,3 +13,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+<%= link_to "Genre", genres_path %>
