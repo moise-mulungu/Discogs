@@ -1,2 +1,15 @@
-<h1>Genres#new</h1>
-<p>Find me in app/views/genres/new.html.erb</p>
+<h1>New Genre</h1>
+
+<%= form_with model: @genre do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% @genre.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

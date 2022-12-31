@@ -2,9 +2,9 @@
 <ul>
   <% @genres.each do |genre| %>
     <li>
-      <a href="<%= genres_path(genre) %>">
-        <%= genre.name %>
-      </a>
+      <%= link_to genre.name, genre %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "New Genre", new_genre_path %>
