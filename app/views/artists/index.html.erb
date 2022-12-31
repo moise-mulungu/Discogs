@@ -2,20 +2,14 @@
 <ul>
   <% @artists.each do |artist| %>
     <li>
-      <a href="<%= artists_path(artist) %>">
-      Name: <%=  artist.name %>
-      </a>
+
+      <%= link_to artist.name, artist %>
+      <%= link_to artist.country, artist %>
+      <%= link_to artist.number_of_albums, artist %>
+      <%= link_to artist.image, artist %>
+      <%= link_to artist.genre_id, artist %>
     </li>
-    <li>
-    <a href="<%= artists_path(artist) %>">
-    Country: <%= artist.country %>
-    </a>
-  </li>
-  <li>
-  <a href="<%= artists_path(artist) %>">
-   Albums: <%=  artist.numbers_of_album %>
-  </a>
-</li>
-image : <%= artist.image %>
-<% end %>
+  <% end %>
 </ul>
+
+<%= link_to "New Artist", new_artist_path %>

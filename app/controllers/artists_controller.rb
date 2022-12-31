@@ -5,7 +5,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @genres.artist_id = Artist.find(params[:id])
+    @artist = Artist.find(params[:id])
   end
 
   def new
@@ -13,18 +13,19 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    # @artist = Artist.new(name: "...", country: "...")
-    @artist = Article.new(artist_params)
+    @genre = Genre.find(params[:genre_id])
+    @artist = @genre.artists.create(artist_params)
+    redirect_to genre_path(@genre)
 
-    if @artist.save
-      redirect_to @artist
-    else
-      render :new, status: :unprocessable_entity
-    end
+    # if @artist.save
+    #   redirect_to @artist
+    # else
+    #   render :new, status: :unprocessable_entity
+    # end
   end
 
   private
     def artist_params
-      params.require(:artist).permit(:name, :country, :numbers_of_album, :genre_id)
+      params.require(:artist).permit(:name, :country, :number_of_albums, :genre_id)
     end
 end

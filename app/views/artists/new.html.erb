@@ -1,2 +1,41 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<h1>New Artist</h1>
+
+<%= form_with model: @artist do |form| %>
+    <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        <% @artist.errors.full_messages_for(:name).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+    <div>
+        <%= form.label :country %><br>
+        <%= form.text_field :country %>
+        <% @artist.errors.full_messages_for(:country).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+    <div>
+        <%= form.label :image %><br>
+        <%= form.text_field :image %>
+        <% @artist.errors.full_messages_for(:image).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+    <div>
+        <%= form.label :number_of_albums %><br>
+        <%= form.text_field :number_of_albums %>
+        <% @artist.errors.full_messages_for(:number_of_albums).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+    <div>
+        <%= form.submit %>
+    </div>
+    <% end %>
+    
+    <%= link_to "Artist", artists_path %>
