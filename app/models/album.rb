@@ -5,5 +5,5 @@ class Album < ApplicationRecord
   validates :name, presence: true
   validates :artist_id, presence: true
   validates :number_of_songs, presence: true
-  validates :release_date, presence: true
+  validates :released_on, presence: true
 end
