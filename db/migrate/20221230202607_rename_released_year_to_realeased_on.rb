@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Style/Documentation: Missing top-level class documentation comment.
 class RenameReleasedYearToRealeasedOn < ActiveRecord::Migration[7.0]
   def change
     change :release_on do |t|

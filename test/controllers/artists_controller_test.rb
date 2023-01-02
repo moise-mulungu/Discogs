@@ -1,22 +1,24 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class ArtistsControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test 'should get index' do
     get artists_index_url
     assert_response :success
   end
 
-  test "should get show" do
+  test 'should get show' do
     get artists_show_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get artists_new_url
     assert_response :success
   end
 
-  test "should get delete" do
+  test 'should get delete' do
     get artists_delete_url
     assert_response :success
   end

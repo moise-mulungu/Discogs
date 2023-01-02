@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Style/Documentation: Missing top-level class documentation comment.
 class GenresController < ApplicationController
   def index
     @genres = Genre.all
@@ -44,8 +45,8 @@ class GenresController < ApplicationController
   end
 
   private
+
   def genre_params
     params.require(:genre).permit(:name)
   end
-  
 end

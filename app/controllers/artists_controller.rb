@@ -1,4 +1,6 @@
+# frozen_string_literal: true
 
+# Style/Documentation: Missing top-level class documentation comment.
 class ArtistsController < ApplicationController
   def index
     @artists = Artist.all
@@ -25,7 +27,8 @@ class ArtistsController < ApplicationController
   end
 
   private
-    def artist_params
-      params.require(:artist).permit(:name, :country, :number_of_albums, :genre_id)
-    end
+
+  def artist_params
+    params.require(:artist).permit(:name, :country, :number_of_albums, :genre_id)
+  end
 end

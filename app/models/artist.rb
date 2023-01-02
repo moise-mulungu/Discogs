@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Artist < ApplicationRecord
   belongs_to :genre
   has_many :albums, dependent: :destroy

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Style/Documentation: Missing top-level class documentation comment.
 class SongsController < ApplicationController
   def index
     @songs = Song.all
@@ -44,6 +47,7 @@ class SongsController < ApplicationController
   # end
 
   private
+
   def song_params
     params.require(:song).permit(:title, :album_id)
   end

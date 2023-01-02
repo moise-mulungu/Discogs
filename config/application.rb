@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Style/Documentation: Missing top-level class documentation comment.
 require_relative 'boot'
 
 require 'rails/all'
