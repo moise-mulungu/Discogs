@@ -1,10 +1,14 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+# Style/Documentation: Missing top-level class documentation comment.
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+# config.autoload_paths += %W(#{config.root}/lib)
 
 module Discogs
   class Application < Rails::Application

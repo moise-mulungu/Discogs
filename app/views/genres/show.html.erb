@@ -1,0 +1,46 @@
+<h1>Genres#show</h1>
+<% @genre.artists.each do |artist| %>
+  <p>
+    <strong>Name:</strong>
+    <%= artist.name %>
+  </p>
+
+  <p>
+    <strong>Country:</strong>
+    <%= artist.country %>
+  </p>
+  <p>
+    <strong>Number_of_albums:</strong>
+    <%= artist.number_of_albums %>
+  </p>
+  <p>
+    <strong>Image:</strong>
+    <%= artist.image %>
+  </p>
+<% end %>
+
+<h2>Add an artist:</h2>
+<%= form_with model: [ @genre, @genre.artists.build ] do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :country %><br>
+    <%= form.text_field :country %>
+  </p>
+  <p>
+    <%= form.label :number_of_albums %><br>
+    <%= form.text_field :number_of_albums %>
+  </p>
+  <p>
+    <%= form.label :image %><br>
+    <%= form.text_field :image %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to "Back", genres_path %>
+<%= link_to "Artist", artists_path %>
